@@ -53,3 +53,34 @@ def save_customers(customers: list):
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(existing_data, f, indent=4)
+
+def load_bookings():
+    if not os.path.exists(DATA_FILE):
+        return []
+
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if not content:
+                return []
+            data = json.loads(content)
+            return data.get("bookings", [])
+    except json.JSONDecodeError:
+        return []
+
+def save_bookings(bookings: list):
+    existing_data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if content:
+                try:
+                    existing_data = json.loads(content)
+                except json.JSONDecodeError:
+                    existing_data = {}
+
+    existing_data["bookings"] = [b.to_dict() for b in bookings]
+
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, indent=4)

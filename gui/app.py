@@ -1,6 +1,7 @@
 ﻿import tkinter as tk
 from gui.service_view import CreateServiceWindow
 from gui.customer_view import CreateCustomerWindow
+from gui.booking_view import CreateBookingWindow
 
 class PandaSpaApp:
     def __init__(self):
@@ -28,7 +29,11 @@ class PandaSpaApp:
             text="Create Customer",
             command=self._open_create_customer
         ).pack(pady=5)
-        tk.Button(self.root, text="Book Appointment").pack(pady=5)
+        tk.Button(
+            self.root,
+            text="Book Appointment",
+            command=self._open_create_booking
+        ).pack(pady=5)
         tk.Button(self.root, text="Finance Overview").pack(pady=5)
         tk.Button(self.root, text="Statistics").pack(pady=5)
 
@@ -39,6 +44,10 @@ class PandaSpaApp:
 
     def _open_create_customer(self):
         CreateCustomerWindow(self.root)
+
+
+    def _open_create_booking(self):
+        CreateBookingWindow(self.root)
 
 
     def run(self):

@@ -16,5 +16,12 @@
             "name": "Bamboo",
             "species": "Panda"
         }
+    ],
+    "bookings": [
+        {
+            "customer_name": "Bamboo",
+            "service_name": "Thermal Bath",
+            "date_time": "2026-12-06 10:00"
+        }
     ]
 }
