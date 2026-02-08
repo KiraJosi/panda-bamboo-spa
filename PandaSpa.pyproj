@@ -22,17 +22,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="data_manager.py" />
+    <Compile Include="gui\app.py" />
+    <Compile Include="gui\booking_view.py" />
+    <Compile Include="gui\customer_view.py" />
+    <Compile Include="gui\finance_view.py" />
+    <Compile Include="gui\service_view.py" />
+    <Compile Include="gui\stats_view.py" />
+    <Compile Include="gui\__init__.py" />
     <Compile Include="main.py" />
     <Compile Include="spa\booking.py" />
     <Compile Include="spa\customer.py" />
+    <Compile Include="spa\data_manager.py" />
+    <Compile Include="spa\finance.py" />
     <Compile Include="spa\service.py" />
     <Compile Include="spa\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="gui\" />
+    <Folder Include="data\" />
     <Folder Include="spa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="architecture.md" />
+    <Content Include="data\spa_data.json" />
     <Content Include="README.md" />
     <Content Include="requirements.md" />
   </ItemGroup>
