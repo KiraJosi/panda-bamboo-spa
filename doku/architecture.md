@@ -34,22 +34,29 @@ Ein Panda betreibt ein gemütliches Spa für Waldtiere. Die Python-Anwendung hil
 ### 4.1. File Structure
 
 PandaSpa/
-│-- main.py
-│-- data_manager.py
-│-- architecture.md
-│-- requirements.md
-└─ spa/
-├─ init.py
-├─ service.py
-├─ customer.py
-└─ booking.py
-└─ gui/
-├─ app.py
-├─ service_view.py
-├─ customer_view.py
-├─ booking_view.py
-├─ expenses_view.py
-└─ statistics_view.py
+├─ main.py
+├─ README.md
+└─ data/
+   └─ spa_data.json_
+└─ doku/
+   └─ architecture.md
+└─ src/
+	└─ spa/
+	   ├─ __init__.py
+	   ├─ service.py
+	   ├─ customer.py	   
+	   ├─ data_manager_.py
+	   ├─ finance.py
+	   └─ booking.py
+	└─ gui/
+	   ├─ __init__.py
+	   ├─ app.py
+	   ├─ service_view.py
+	   ├─ customer_view.py
+	   ├─ booking_view.py
+	   ├─ expenses_view.py
+	   ├─ finances_view.py
+	   └─ statistics_view.py
 
 
 ### 4.2. UML / Use-Case Diagram

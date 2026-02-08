@@ -29,102 +29,17 @@
             "name": "Hot Stone Massage",
             "price": 50.0,
             "duration": 35
+        },
+        {
+            "name": "12345",
+            "price": 20.0,
+            "duration": 10
         }
     ],
     "customers": [
         {
-            "name": "Fuzzy",
-            "species": "Fox"
-        },
-        {
-            "name": "Hazel",
-            "species": "Deer"
-        },
-        {
-            "name": "Rocky",
-            "species": "Raccoon"
-        },
-        {
-            "name": "Luna",
-            "species": "Rabbit"
-        },
-        {
-            "name": "Bamboo",
-            "species": "Panda"
-        }
-    ],
-    "bookings": [
-        {
-            "customer_name": "Fuzzy",
-            "service_name": "Thermal Bath",
-            "date_time": "2026-02-10 10:00"
-        },
-        {
-            "customer_name": "Hazel",
-            "service_name": "Bamboo Massage",
-            "date_time": "2026-02-10 11:30"
-        },
-        {
-            "customer_name": "Rocky",
-            "service_name": "Tea Therapy",
-            "date_time": "2026-02-10 12:00"
-        },
-        {
-            "customer_name": "Luna",
-            "service_name": "Aromatherapy",
-            "date_time": "2026-02-11 09:00"
-        },
-        {
-            "customer_name": "Bamboo",
-            "service_name": "Hot Stone Massage",
-            "date_time": "2026-02-11 10:30"
-        },
-        {
-            "customer_name": "Fuzzy",
-            "service_name": "Tea Therapy",
-            "date_time": "2026-02-12 14:00"
-        },
-        {
-            "customer_name": "Hazel",
-            "service_name": "Thermal Bath",
-            "date_time": "2026-02-12 15:00"
-        },
-        {
-            "customer_name": "Rocky",
-            "service_name": "Bamboo Massage",
-            "date_time": "2026-02-13 11:00"
-        },
-        {
-            "customer_name": "Luna",
-            "service_name": "Hot Stone Massage",
-            "date_time": "2026-02-13 13:00"
-        },
-        {
-            "customer_name": "Bamboo",
-            "service_name": "Tea Therapy",
-            "date_time": "2026-02-13 15:00"
-        }
-    ],
-    "expenses": [
-        {
-            "name": "Tea",
-            "amount": 15.0
-        },
-        {
-            "name": "Massage Oil",
-            "amount": 20.0
-        },
-        {
-            "name": "Bamboo Bath",
-            "amount": 10.0
-        },
-        {
-            "name": "Hot Stones",
-            "amount": 25.0
-        },
-        {
-            "name": "Towels",
-            "amount": 12.0
+            "name": "12345",
+            "species": "12345"
         }
     ]
 }
