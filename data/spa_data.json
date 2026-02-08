@@ -2,31 +2,13 @@
     "services": [
         {
             "name": "Thermal Bath",
-            "price": 25.0,
+            "price": 30,
             "duration": 60
-        }
-    ],
-    "customers": [
-        {
-            "name": "Bamboo",
-            "species": "Panda"
-        }
-    ],
-    "bookings": [
-        {
-            "customer": "Bamboo",
-            "service": "Thermal Bath",
-            "date_time": "2026-02-10 14:00"
-        }
-    ],
-    "expenses": [
-        {
-            "description": "Water heating",
-            "amount": 5.0
         },
         {
-            "description": "Tea supplies",
-            "amount": 3.0
+            "name": "Massage",
+            "price": 25.0,
+            "duration": 60
         }
     ]
 }

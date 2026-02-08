@@ -1,77 +1,23 @@
 import json
-from spa.service import SpaService
+import os
+from spa.service import Service
 from spa.customer import Customer
 from spa.booking import Booking
 
 
-DATA_FILE = "spa_data.json"
+DATA_FILE = "data/spa_data.json"
 
 
-def save_data(services, customers, bookings, expenses):
-    data = {
-        "services": [
-            {
-                "name": s.name,
-                "price": s.price,
-                "duration": s.duration_minutes
-            } for s in services
-        ],
-        "customers": [
-            {
-                "name": c.name,
-                "species": c.species
-            } for c in customers
-        ],
-        "bookings": [
-            {
-                "customer": b.customer.name,
-                "service": b.service.name,
-                "date_time": b.date_time
-            } for b in bookings
-        ],
-        "expenses": [
-            {
-                "description": e[0],
-                "amount": e[1]
-            } for e in expenses
-        ]
-    }
+def load_services():
+    if not os.path.exists(DATA_FILE):
+        return []
 
-    with open(DATA_FILE, "w") as file:
-        json.dump(data, file, indent=4)
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        return data.get("services", [])
 
-
-def load_data():
-    try:
-        with open(DATA_FILE, "r") as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        return [], [], [], []
-
-    services = [
-        SpaService(s["name"], s["price"], s["duration"])
-        for s in data.get("services", [])
-    ]
-
-    customers = [
-        Customer(c["name"], c["species"])
-        for c in data.get("customers", [])
-    ]
-
-    service_dict = {s.name: s for s in services}
-    customer_dict = {c.name: c for c in customers}
-
-    bookings = []
-    for b in data.get("bookings", []):
-        customer = customer_dict.get(b["customer"])
-        service = service_dict.get(b["service"])
-        if customer and service:
-            bookings.append(Booking(customer, service, b["date_time"]))
-
-    expenses = [
-        (e["description"], e["amount"])
-        for e in data.get("expenses", [])
-    ]
-
-    return services, customers, bookings, expenses
-
+def save_services(services: list):
+    data = {"services": [s.to_dict() for s in services]}
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)

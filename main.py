@@ -1,4 +1,4 @@
-﻿from spa.service import SpaService
+﻿from spa.service import Service
 from spa.customer import Customer
 from spa.booking import Booking
 from data_manager import save_data, load_data

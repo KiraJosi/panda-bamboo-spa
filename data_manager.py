@@ -1,5 +1,5 @@
 import json
-from spa.service import SpaService
+from spa.service import Service
 from spa.customer import Customer
 from spa.booking import Booking
 
@@ -49,7 +49,7 @@ def load_data():
         return [], [], [], []
 
     services = [
-        SpaService(s["name"], s["price"], s["duration"])
+        Service(s["name"], s["price"], s["duration"])
         for s in data.get("services", [])
     ]
 
