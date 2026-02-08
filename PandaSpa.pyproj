@@ -21,7 +21,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="data_manager.py" />
     <Compile Include="gui\app.py" />
     <Compile Include="gui\booking_view.py" />
     <Compile Include="gui\customer_view.py" />

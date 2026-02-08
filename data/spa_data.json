@@ -10,5 +10,11 @@
             "price": 25.0,
             "duration": 60
         }
+    ],
+    "customers": [
+        {
+            "name": "Bamboo",
+            "species": "Panda"
+        }
     ]
 }

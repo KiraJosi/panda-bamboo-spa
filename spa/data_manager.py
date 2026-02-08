@@ -21,3 +21,35 @@ def save_services(services: list):
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
+
+def load_customers():
+    if not os.path.exists(DATA_FILE):
+        return []
+
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if not content:
+                return []
+            data = json.loads(content)
+            return data.get("customers", [])
+    except json.JSONDecodeError:
+        return []
+
+def save_customers(customers: list):
+    # Lade bestehenden Content
+    existing_data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if content:
+                try:
+                    existing_data = json.loads(content)
+                except json.JSONDecodeError:
+                    existing_data = {}
+
+    existing_data["customers"] = [c.to_dict() for c in customers]
+
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, indent=4)

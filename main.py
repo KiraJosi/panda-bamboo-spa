@@ -1,13 +1,4 @@
-﻿from spa.service import Service
-from spa.customer import Customer
-from spa.booking import Booking
-from data_manager import save_data, load_data
-
-
-services, customers, bookings, expenses = load_data()
-
-
-from gui.app import PandaSpaApp
+﻿from gui.app import PandaSpaApp
 
 def main():
     app = PandaSpaApp()
