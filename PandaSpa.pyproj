@@ -24,6 +24,7 @@
     <Compile Include="gui\app.py" />
     <Compile Include="gui\booking_view.py" />
     <Compile Include="gui\customer_view.py" />
+    <Compile Include="gui\expenses_view.py" />
     <Compile Include="gui\finance_view.py" />
     <Compile Include="gui\service_view.py" />
     <Compile Include="gui\stats_view.py" />

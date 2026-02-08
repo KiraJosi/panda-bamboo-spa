@@ -84,3 +84,35 @@ def save_bookings(bookings: list):
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(existing_data, f, indent=4)
+
+
+def load_expenses():
+    if not os.path.exists(DATA_FILE):
+        return []
+
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if not content:
+                return []
+            data = json.loads(content)
+            return data.get("expenses", [])
+    except json.JSONDecodeError:
+        return []
+
+def save_expenses(expenses: list):
+    existing_data = {}
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if content:
+                try:
+                    existing_data = json.loads(content)
+                except json.JSONDecodeError:
+                    existing_data = {}
+
+    existing_data["expenses"] = expenses  # Liste von dicts mit {"name": ..., "amount": ...}
+
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, indent=4)

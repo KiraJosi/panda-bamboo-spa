@@ -23,5 +23,15 @@
             "service_name": "Thermal Bath",
             "date_time": "2026-12-06 10:00"
         }
+    ],
+    "expenses": [
+        {
+            "name": "Tea",
+            "amount": 3.0
+        },
+        {
+            "name": "Water heating",
+            "amount": 5.0
+        }
     ]
 }
