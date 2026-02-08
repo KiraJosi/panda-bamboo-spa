@@ -1,4 +1,5 @@
 ﻿import tkinter as tk
+from gui.service_view import CreateServiceWindow
 
 class PandaSpaApp:
     def __init__(self):
@@ -16,11 +17,20 @@ class PandaSpaApp:
         )
         title.pack(pady=20)
 
-        tk.Button(self.root, text="Create Service").pack(pady=5)
+        tk.Button(
+            self.root,
+            text="Create Service",
+            command=self._open_create_service
+        ).pack(pady=5)
         tk.Button(self.root, text="Create Customer").pack(pady=5)
         tk.Button(self.root, text="Book Appointment").pack(pady=5)
         tk.Button(self.root, text="Finance Overview").pack(pady=5)
         tk.Button(self.root, text="Statistics").pack(pady=5)
+
+
+    def _open_create_service(self):
+        CreateServiceWindow(self.root)
+
 
     def run(self):
         self.root.mainloop()
