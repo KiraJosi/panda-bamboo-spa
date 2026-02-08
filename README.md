@@ -15,10 +15,12 @@ A simple Python terminal application that helps a panda manage a spa in a bamboo
 - Visual Studio 2022
 - JSON for data persistence
 
-## How to run
-```bash
-python main.py
-
 # Project Context
 
 This project was created as part of a university course to practice software design, requirements engineering, and Python programming.
+
+# How to run
+```bash
+python main.py
+
+
