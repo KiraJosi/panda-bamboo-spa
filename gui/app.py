@@ -4,6 +4,7 @@ from gui.customer_view import CreateCustomerWindow
 from gui.booking_view import CreateBookingWindow
 from gui.finance_view import FinanceOverviewWindow
 from gui.expenses_view import ExpensesWindow
+from gui.statistics_view import StatisticsWindow
 
 class PandaSpaApp:
     def __init__(self):
@@ -46,7 +47,11 @@ class PandaSpaApp:
             text="Finance Overview",
             command=self._open_finance_overview
         ).pack(pady=5)
-        tk.Button(self.root, text="Statistics").pack(pady=5)
+        tk.Button(
+            self.root,
+            text="View Statistics",
+            command=self._open_statistics
+        ).pack(pady=5)
 
 
     def _open_create_service(self):
@@ -67,6 +72,10 @@ class PandaSpaApp:
 
     def _open_expenses(self):
         ExpensesWindow(self.root)
+
+
+    def _open_statistics(self):
+        StatisticsWindow(self.root)
 
 
     def run(self):

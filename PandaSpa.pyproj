@@ -27,7 +27,7 @@
     <Compile Include="gui\expenses_view.py" />
     <Compile Include="gui\finance_view.py" />
     <Compile Include="gui\service_view.py" />
-    <Compile Include="gui\stats_view.py" />
+    <Compile Include="gui\statistics_view.py" />
     <Compile Include="gui\__init__.py" />
     <Compile Include="main.py" />
     <Compile Include="spa\booking.py" />
