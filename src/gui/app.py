@@ -1,10 +1,10 @@
 ﻿import tkinter as tk
-from gui.service_view import CreateServiceWindow
-from gui.customer_view import CreateCustomerWindow
-from gui.booking_view import CreateBookingWindow
-from gui.finance_view import FinanceOverviewWindow
-from gui.expenses_view import ExpensesWindow
-from gui.statistics_view import StatisticsWindow
+from src.gui.service_view import CreateServiceWindow
+from src.gui.customer_view import CreateCustomerWindow
+from src.gui.booking_view import CreateBookingWindow
+from src.gui.finance_view import FinanceOverviewWindow
+from src.gui.expenses_view import ExpensesWindow
+from src.gui.statistics_view import StatisticsWindow
 
 class PandaSpaApp:
     def __init__(self):

@@ -1,7 +1,7 @@
 ﻿import tkinter as tk
 from tkinter import messagebox
 from collections import Counter
-from spa.data_manager import load_bookings
+from src.spa.data_manager import load_bookings
 
 # Für Diagramme
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg

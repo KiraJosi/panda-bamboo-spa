@@ -21,32 +21,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="gui\app.py" />
-    <Compile Include="gui\booking_view.py" />
-    <Compile Include="gui\customer_view.py" />
-    <Compile Include="gui\expenses_view.py" />
-    <Compile Include="gui\finance_view.py" />
-    <Compile Include="gui\service_view.py" />
-    <Compile Include="gui\statistics_view.py" />
-    <Compile Include="gui\__init__.py" />
+    <Compile Include="src\gui\app.py" />
+    <Compile Include="src\gui\booking_view.py" />
+    <Compile Include="src\gui\customer_view.py" />
+    <Compile Include="src\gui\expenses_view.py" />
+    <Compile Include="src\gui\finance_view.py" />
+    <Compile Include="src\gui\service_view.py" />
+    <Compile Include="src\gui\statistics_view.py" />
+    <Compile Include="src\gui\__init__.py" />
     <Compile Include="main.py" />
-    <Compile Include="spa\booking.py" />
-    <Compile Include="spa\customer.py" />
-    <Compile Include="spa\data_manager.py" />
-    <Compile Include="spa\finance.py" />
-    <Compile Include="spa\service.py" />
-    <Compile Include="spa\__init__.py" />
+    <Compile Include="src\spa\booking.py" />
+    <Compile Include="src\spa\customer.py" />
+    <Compile Include="src\spa\data_manager.py" />
+    <Compile Include="src\spa\finance.py" />
+    <Compile Include="src\spa\service.py" />
+    <Compile Include="src\spa\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="gui\" />
+    <Folder Include="src\gui\" />
     <Folder Include="data\" />
-    <Folder Include="spa\" />
+    <Folder Include="doku\" />
+    <Folder Include="src\" />
+    <Folder Include="src\spa\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="architecture.md" />
+    <Content Include="doku\architecture.md" />
     <Content Include="data\spa_data.json" />
     <Content Include="README.md" />
-    <Content Include="requirements.md" />
+    <Content Include="doku\requirements.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

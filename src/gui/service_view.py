@@ -1,7 +1,7 @@
 ﻿import tkinter as tk
 from tkinter import messagebox
-from spa.service import Service
-from spa.data_manager import load_services, save_services
+from src.spa.service import Service
+from src.spa.data_manager import load_services, save_services
 
 class CreateServiceWindow:
     def __init__(self, parent):

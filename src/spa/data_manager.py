@@ -1,8 +1,8 @@
 import json
 import os
-from spa.service import Service
-from spa.customer import Customer
-from spa.booking import Booking
+from src.spa.service import Service
+from src.spa.customer import Customer
+from src.spa.booking import Booking
 
 
 DATA_FILE = "data/spa_data.json"

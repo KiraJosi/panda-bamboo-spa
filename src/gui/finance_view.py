@@ -1,6 +1,6 @@
 ﻿import tkinter as tk
 from tkinter import messagebox
-from spa.data_manager import load_bookings, load_services, load_expenses
+from src.spa.data_manager import load_bookings, load_services, load_expenses
 
 class FinanceOverviewWindow:
     def __init__(self, parent):

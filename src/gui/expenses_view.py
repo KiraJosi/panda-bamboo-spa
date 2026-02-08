@@ -1,6 +1,6 @@
 ﻿import tkinter as tk
 from tkinter import messagebox
-from spa.data_manager import load_expenses, save_expenses
+from src.spa.data_manager import load_expenses, save_expenses
 
 class ExpensesWindow:
     def __init__(self, parent):

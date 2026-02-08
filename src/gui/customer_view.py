@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-from spa.customer import Customer
-from spa.data_manager import load_customers, save_customers
+from src.spa.customer import Customer
+from src.spa.data_manager import load_customers, save_customers
 
 class CreateCustomerWindow:
     def __init__(self, parent):

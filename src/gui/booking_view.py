@@ -1,7 +1,7 @@
 ﻿import tkinter as tk
 from tkinter import messagebox
-from spa.data_manager import load_customers, load_services, load_bookings, save_bookings
-from spa.booking import Booking
+from src.spa.data_manager import load_customers, load_services, load_bookings, save_bookings
+from src.spa.booking import Booking
 from datetime import datetime
 
 class CreateBookingWindow:
