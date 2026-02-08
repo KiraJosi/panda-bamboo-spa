@@ -1,16 +1,24 @@
 ﻿# 🐼 Panda Bamboo Spa
 
-A Python-based spa management system operated by a panda in a bamboo forest.
+A simple Python terminal application that helps a panda manage a spa in a bamboo forest.
 
 ## Features
 - Manage spa services
 - Manage customers
-- Simple terminal-based application
+- Create bookings
+- Calculate income, expenses, and profit
+- Persist data using JSON
+- Display statistics (most popular service)
 
-## Tech Stack
+## Technologies
 - Python 3
-- No external libraries
+- Visual Studio 2022
+- JSON for data persistence
 
 ## How to run
 ```bash
 python main.py
+
+# Project Context
+
+This project was created as part of a university course to practice software design, requirements engineering, and Python programming.
