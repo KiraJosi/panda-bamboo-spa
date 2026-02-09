@@ -24,7 +24,7 @@ Ein Panda betreibt ein gemütliches Spa für Waldtiere. Die Python-Anwendung hil
 | FR-04     | Functional     | The system shall automatically calculate total revenue from bookings.| Must  |
 | FR-05     | Functional     | The system shall allow the user to enter Expenses.               | Should   |
 | FR-06     | Functional     | The system shall display a Statistics view with most popular Services.| Should|
-| NFR-01    | Non-functional | The system shall persist data in JSON files.                     | Must     |
+| NFR-01    | Non-functional | The system shall persist data in JSON files.                     | Can      |
 | NFR-02    | Non-functional | The GUI shall be intuitive and user-friendly.                    | Should   |
 
 ---
