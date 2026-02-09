@@ -21,11 +21,14 @@ Ein Panda betreibt ein gemütliches Spa für Waldtiere. Die Python-Anwendung hil
 | FR-01     | Functional     | The system shall allow the user to create and view Services.     | Must     |
 | FR-02     | Functional     | The system shall allow the user to create and view Customers.    | Must     |
 | FR-03     | Functional     | The system shall allow the user to book a Service for a Customer.| Must     |
-| FR-04     | Functional     | The system shall automatically calculate total revenue from bookings.| Must  |
-| FR-05     | Functional     | The system shall allow the user to enter Expenses.               | Should   |
+| FR-04     | Functional     | The system shall automatically calculate total revenue from bookings & expenses.| Must  |
+| FR-05     | Functional     | The system shall allow the user to enter Bookings & Expenses.    | Must   	|
 | FR-06     | Functional     | The system shall display a Statistics view with most popular Services.| Should|
-| NFR-01    | Non-functional | The system shall persist data in JSON files.                     | Can      |
-| NFR-02    | Non-functional | The GUI shall be intuitive and user-friendly.                    | Should   |
+| FR-07     | Functional     | The system shall save user preferences.							| Should	|
+| FR-06     | Functional     | The system shall give suggestions for bookings.					| Should	|
+| NFR-01    | Non-functional | The system shall persist data in JSON files.                     | Can      	|
+| NFR-02    | Non-functional | The GUI shall be intuitive and user-friendly.                    | Should   	|
+| NFR-02    | Non-functional | The system shall have simple Error-Handling.						| Can		|
 
 ---
 
