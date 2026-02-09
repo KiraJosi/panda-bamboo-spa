@@ -119,8 +119,9 @@ PandaSpa/
 ## 7. Challenges / Notes
 
 - Terminal → GUI refactor with `tkinter`  
-- JSON persistence with proper error handling  
+- JSON persistence   
 - Statistics chart using `matplotlib`  
 - Future improvements:  
-  - Revenue per service diagram  
-  - Date filtering for bookings
+  - Most valuable customer  
+  - Better views for the data
+    
