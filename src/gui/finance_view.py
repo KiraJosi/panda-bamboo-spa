@@ -15,7 +15,7 @@ class FinanceOverviewWindow:
         self.text.pack(pady=10)
 
     def _calculate_finances(self):
-        # 1️⃣ Einnahmen aus Bookings berechnen
+        # 1️ Einnahmen aus Bookings berechnen
         bookings_data = load_bookings()
         services_data = load_services()
         service_prices = {s["name"]: s["price"] for s in services_data}
@@ -27,15 +27,15 @@ class FinanceOverviewWindow:
             total_income += price
             income_details.append(f"{b['customer_name']} → {b['service_name']}: €{price}")
 
-        # 2️⃣ Ausgaben laden
+        # 2️ Ausgaben laden
         expenses_data = load_expenses()
         total_expenses = sum([e["amount"] for e in expenses_data])
         expense_details = [f"{e['name']}: €{e['amount']}" for e in expenses_data]
 
-        # 3️⃣ Gewinn berechnen
+        # 3️ Gewinn berechnen
         profit = total_income - total_expenses
 
-        # 4️⃣ Alles anzeigen
+        # 4️ Alles anzeigen
         self.text.insert(tk.END, "💰 Einnahmen:\n")
         for line in income_details:
             self.text.insert(tk.END, f"  {line}\n")

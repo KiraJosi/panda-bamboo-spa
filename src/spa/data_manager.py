@@ -37,7 +37,6 @@ def load_customers():
         return []
 
 def save_customers(customers: list):
-    # Lade bestehenden Content
     existing_data = {}
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -111,7 +110,7 @@ def save_expenses(expenses: list):
                 except json.JSONDecodeError:
                     existing_data = {}
 
-    existing_data["expenses"] = expenses  # Liste von dicts mit {"name": ..., "amount": ...}
+    existing_data["expenses"] = expenses  
 
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:

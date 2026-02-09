@@ -45,7 +45,6 @@ class CreateBookingWindow:
             messagebox.showerror("Error", "All fields are required.")
             return
 
-        # optional: Datum validieren
         try:
             datetime.strptime(date_time, "%Y-%m-%d %H:%M")
         except ValueError:

@@ -31,7 +31,7 @@ class StatisticsWindow:
             return
 
         # -----------------------------
-        # 1️⃣ Beliebteste Services
+        # 1️ Beliebteste Services
         # -----------------------------
         services = [b["service_name"] for b in bookings_data]
         service_counts = Counter(services)
@@ -43,7 +43,7 @@ class StatisticsWindow:
         self.text.insert(tk.END, "\n")
 
         # -----------------------------
-        # 2️⃣ Häufigste Kunden
+        # 2️ Häufigste Kunden
         # -----------------------------
         customers = [b["customer_name"] for b in bookings_data]
         customer_counts = Counter(customers)
@@ -55,7 +55,7 @@ class StatisticsWindow:
         self.text.insert(tk.END, f"\nTotal Bookings: {len(bookings_data)}\n")
 
         # -----------------------------
-        # 3️⃣ Diagramm für Services
+        # 3️ Diagramm für Services
         # -----------------------------
         if most_common_services:
             fig, ax = plt.subplots(figsize=(5,3))

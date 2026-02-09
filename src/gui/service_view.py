@@ -41,10 +41,10 @@ class CreateServiceWindow:
             messagebox.showerror("Error", "Price must be a number and duration must be an integer.")
             return
 
-        # 1️⃣ Service erstellen
+        # 1️ Service erstellen
         new_service = Service(name, price, duration)
 
-        # 2️⃣ Services laden, anhängen, speichern
+        # 2️ Services laden, anhängen, speichern
         services_data = load_services()
         services = [Service.from_dict(s) for s in services_data]
         services.append(new_service)
